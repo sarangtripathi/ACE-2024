@@ -11,6 +11,7 @@ import Instagram from "../assets/instagram.svg";
 import ArrowDown from "../assets/arrow-down.svg";
 
 import './Home.css'
+import { Auth } from '../Auth/Auth';
 const Home = () =>  {
     const [showFirstHeading, setShowFirstHeading] = useState(true);
 
@@ -186,7 +187,9 @@ const Home = () =>  {
           <section className="py-10" id="technologies">
             <div className="container m-auto px-4">
               <h2 className="text-2xl font-semibold">Login / Signup </h2>
-              {/* <div className="mt-14">
+              <Auth className="mt-14" />
+{/* 
+              <div className="mt-14">
                 <div>
                   <div className="flex justify-between items-center">
                     <h2 className="font-semibold">HTML</h2>
