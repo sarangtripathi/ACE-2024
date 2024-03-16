@@ -11,7 +11,7 @@ import Instagram from "../assets/instagram.svg";
 import ArrowDown from "../assets/arrow-down.svg";
 
 import './Home.css'
-import { Auth } from '../Auth/Auth';
+import Login from '../Auth/Login';
 const Home = () =>  {
     const [showFirstHeading, setShowFirstHeading] = useState(true);
 
@@ -62,7 +62,7 @@ const Home = () =>  {
     }, []);
   
     return (
-      <div className="w-full m-auto relative">
+      <div className="w-full m-auto relative landing-body">
         <header className={`${scrolling ? 'border-b border-gray-900' : ''}  fixed left-0 right-0 top-0 z-20  shadow-lg  shadow-gray-700`} id="home">
           <div className="container m-auto px-4 py-6 w-full bg-black">
             <div className="flex flex-col gap-4 sm:flex-row justify-between items-center">
@@ -108,8 +108,8 @@ const Home = () =>  {
                   <p className="mt-4 text-gray-400">
                     Feeding Media Is a digital platform which fosters food distribution and aims to feed the entrie Nation with minimize food wastage , Join us Today !
                   </p>
-                  <button className="px-8 bg-gradient-to-r from-fuchsia-200 to-indigo-600  shadow-md py-3 mt-5  font-semibold text-xl rounded-lg bg-white">
-                    Join Us 
+                  <button  className="px-8 bg-gradient-to-r from-fuchsia-200 to-indigo-600  shadow-md py-3 mt-5  font-semibold text-xl rounded-lg bg-white">
+                   <a href="#technologies" >Join Us</a>  
                   </button>
                 </div>
               </div>
@@ -187,7 +187,7 @@ const Home = () =>  {
           <section className="py-10" id="technologies">
             <div className="container m-auto px-4">
               <h2 className="text-2xl font-semibold">Login / Signup </h2>
-              <Auth className="mt-14" />
+              {/* < Login className="mt-14" /> */}
 {/* 
               <div className="mt-14">
                 <div>
@@ -245,7 +245,7 @@ const Home = () =>  {
             </div>
           </section>
           {/* Additional skills section */}
-          <section>
+          <section id="work">
             <div className="container m-auto px-4 py-14">
               <h2 className="text-2xl font-semibold">
                 Extensive Work Across
