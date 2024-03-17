@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { TbSocial } from "react-icons/tb";
 import { BsShare } from "react-icons/bs";
@@ -21,7 +21,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [errMsg, setErrMsg] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const {
@@ -64,14 +64,17 @@ const Login = () => {
       <div className='w-full md:w-2/3 h-fit lg:h-full 2xl:h-5/6 py-8 lg:py-0 flex bg-primary rounded-xl overflow-hidden shadow-xl'>
         {/* LEFT */}
         <div className='w-full lg:w-1/2 h-full p-10 2xl:px-20 flex flex-col justify-center '>
+          <Link to='/'>
+          
           <div className='w-full flex gap-2 items-center mb-6'>
             <div className='p-2 bg-[#065ad8] rounded text-white'>
               <TbSocial />
             </div>
             <span className='text-2xl text-[#065ad8] font-semibold'>
-              LinkUp
+              Feed Media
             </span>
           </div>
+          </Link>
 
           <p className='text-ascent-1 text-base font-semibold'>
             Log in to your account
@@ -141,7 +144,7 @@ const Login = () => {
           <p className='text-ascent-2 text-sm text-center'>
             Don't have an account?
             <Link
-              to='/register'
+              to='/signup'
               className='text-[#065ad8] font-semibold ml-2 cursor-pointer'
             >
               Create Account
@@ -149,7 +152,7 @@ const Login = () => {
           </p>
         </div>
         {/* RIGHT */}
-        <div className='hidden w-1/2 h-full lg:flex flex-col items-center justify-center bg-blue'>
+        <div className='hidden bg-[#065ad8] w-1/2 h-full lg:flex flex-col items-center justify-center bg-blue'>
           <div className='relative w-full flex items-center justify-center'>
             <img
               src={BgImage}
@@ -175,10 +178,10 @@ const Login = () => {
 
           <div className='mt-16 text-center'>
             <p className='text-white text-base'>
-              Connect with friends & have  fun
+              Connect with Community & have  fun
             </p>
             <span className='text-sm text-white/80'>
-              Share memories with friends and the world.
+              Share memories by volunteering around the world.
             </span>
           </div>
         </div>

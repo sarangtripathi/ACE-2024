@@ -5,6 +5,8 @@ import OrgHome from './components/Organization/Home/OrgHome';
 import OrgSidebar from './components/Organization/Sidebar/OrgSidebar';
 import Testing from './components/Organization/Sidebar/Testing';
 import OrgHistory from './components/Organization/History/History';
+import Login from './components/DashBoard/Auth/Login';
+import Register from './components/DashBoard/Auth/Register';
 
 function App() {
 
@@ -13,6 +15,8 @@ function App() {
     <Router>
       <Routes>
       <Route path="/" element={<Home/> } />  
+      <Route path="/login" element={<Login/> } />  
+      <Route path="/signup" element={<Register/> } />  
       <Route path="/orghome" element={ <OrgSidebar><OrgHome/></OrgSidebar> } />  
       <Route path="/orghistory" element={ <OrgSidebar><OrgHistory/></OrgSidebar> } />  
       <Route path="/testing" element={<Testing/> } />  
