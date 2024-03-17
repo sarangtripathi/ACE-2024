@@ -37,12 +37,24 @@ const Login = () => {
     console.log(data);
     setIsSubmitting(true)
     try {
-      // const res = await 
-      // console.log(res);
+      
+      const res = await fetch("http://localhost:5050/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      console.log(res);
+      sessionStorage.setItem("user", JSON.stringify(res));
+      if(data.role == "volunteer"){
+        navigate("/orghome")
+      }else{
+        navigate("/orghome")
+      }
+
       if(res.success){
         setErrMsg("")
-        const newData={ token:res?.token , ...res?.user}
-        console.log(newData);
+        // const newData={ token:res?.token , ...res?.user}
+        // console.log(newData);
         // dispatch(UserLogin(newData))
         console.log("here");
         // navigate('/');

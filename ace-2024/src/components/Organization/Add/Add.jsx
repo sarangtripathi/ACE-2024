@@ -11,7 +11,7 @@ const Add = () => {
     e.preventDefault();
     try {
       const body = { name, quantity, expdate, storereq, foodsafety };
-      const response = await fetch("http://localhost:5000/orgaddsurplus", {
+      const response = await fetch("http://localhost:5050/orgaddsurplus", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)

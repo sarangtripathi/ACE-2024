@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { TbSocial } from "react-icons/tb";
@@ -22,6 +22,7 @@ const Register = () => {
   const [errMsg, setErrMsg] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   // const dispatch = useDispatch();
+  const navigate = useNavigate()
   const {
     register,
     handleSubmit,
@@ -36,6 +37,23 @@ const Register = () => {
     console.log(data);
     setIsSubmitting(true)
     try {
+      if(data.role == "volunteer"){
+        navigate("/orghome")
+      }else{
+        navigate("/orghome")
+      }
+      const res = await fetch("http://localhost:5050/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      console.log(res);
+      sessionStorage.setItem("user", data);
+      if(data.role == "volunteer"){
+        navigate("/orghome")
+      }else{
+        navigate("/orghome")
+      }
       // const res = await apiRequest({
       //   url: "/auth/register",
       //   method: "POST",

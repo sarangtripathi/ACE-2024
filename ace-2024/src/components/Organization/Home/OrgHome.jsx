@@ -8,7 +8,7 @@ const OrgHome = () => {
   const[data,setData]=useState([]);
   const getAllItems = async () => {
     try{
-        const response = await fetch("http://localhost:5000/getAllItems")
+        const response = await fetch("http://localhost:5050/getAllItems")
         const jsonData = await response.json();
         setData(jsonData);
     }catch(err){

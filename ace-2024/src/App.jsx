@@ -5,12 +5,9 @@ import OrgHome from './components/Organization/Home/OrgHome';
 import OrgSidebar from './components/Organization/Sidebar/OrgSidebar';
 import Testing from './components/Organization/Sidebar/Testing';
 import OrgHistory from './components/Organization/History/History';
-<<<<<<< HEAD
 import Login from './components/DashBoard/Auth/Login';
 import Register from './components/DashBoard/Auth/Register';
-=======
 import Add from './components/Organization/Add/Add';
->>>>>>> 5b9a39f2701d62272a06b0a80d4cb740b1443e5b
 
 function App() {
 
