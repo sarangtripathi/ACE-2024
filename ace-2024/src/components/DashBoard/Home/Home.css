@@ -2,7 +2,11 @@ html {
     scroll-behavior: smooth;
 }
 
+<<<<<<< HEAD
 /* body {
+=======
+.landing-body {
+>>>>>>> e2915ac566ad4aab38f2d08dcd7df1715fd1bc70
     background-color: #000;
     color: #fff;
 } */
