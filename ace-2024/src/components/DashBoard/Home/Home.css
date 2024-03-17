@@ -2,9 +2,9 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    /* background-color: #000; */
-    /* color: #fff; */
+.landing-body {
+    background-color: #000;
+    color: #fff;
 }
 
 
