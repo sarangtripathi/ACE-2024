@@ -136,7 +136,7 @@ const OrgSidebar = ({children}) => {
   const [open, setOpen] = useState(true);
   const Menus = [
     { title: "Dashboard", src: "Calendar", link: "/orghome" },
-    { title: "Add Items", src: "add", link: "/orghome" },
+    { title: "Add Items", src: "add (3)", link: "/orgadd" },
     { title: "Expired Stock", src: "Calendar", link: "/schedule" },
     { title: "History", src: "Chart", gap: true, link: "/orghistory" },
     { title: "Volunteers", src: "Folder", link: "/files" },
@@ -156,37 +156,38 @@ const OrgSidebar = ({children}) => {
            border-2 rounded-full  ${!open && "rotate-180"}`}
           onClick={() => setOpen(!open)}
         />
-        <div className="flex gap-x-4 items-center">
+        <div className="flex items-center">
           <img
             src="./src/assets/logo.png"
-            className={`cursor-pointer duration-500 ${
+            className={`cursor-pointer duration-500 mr-2 ${
               open && "rotate-[360deg]"
             }`}
           />
-          <h1
-            className={`text-white origin-left font-medium text-2xl duration-200 ${
+          <div
+            className={`text-white items-center text-center origin-left font-medium text-3xl duration-200 ${
               !open && "scale-0"
             }`}
           >
             Feeding Media
-          </h1>
+          </div>
         </div>
         <ul className="pt-6">
           {Menus.map((Menu, index) => (
+            <Link to={Menu.link}>
             <li
               key={index}
-              className={`flex  rounded-md p-2 cursor-pointer hover:bg-white hover:text-black  text-gray-300 text-lg items-center gap-x-4 
-              ${Menu.gap ? "mt-9" : "mt-2"} ${
-                index === 0 && "bg-white text-black"
-              } `}
+              className={`flex rounded-md p-2 cursor-pointer hover:bg-white hover:text-black hover:font-semibold text-gray-300 text-lg items-center gap-x-4 
+              ${Menu.gap ? "mt-9" : "mt-2"} `}
             >
-            {/* <Link to={Menu.link}> */}
+            
+            <div className="flex">
               <img src={`./src/assets/${Menu.src}.png`} />
-              <span className={`${!open && "hidden"} origin-left duration-200`}>
+              <span className={`${!open && "hidden"} origin-left ml-2 duration-200`}>
                 {Menu.title}
               </span>
-            {/* </Link> */}
+              </div>
             </li>
+            </Link>
           ))}
         </ul>
       </div>
