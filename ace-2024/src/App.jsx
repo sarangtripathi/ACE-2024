@@ -5,6 +5,7 @@ import OrgHome from './components/Organization/Home/OrgHome';
 import OrgSidebar from './components/Organization/Sidebar/OrgSidebar';
 import Testing from './components/Organization/Sidebar/Testing';
 import OrgHistory from './components/Organization/History/History';
+import Add from './components/Organization/Add/Add';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<Home/> } />  
       <Route path="/orghome" element={ <OrgSidebar><OrgHome/></OrgSidebar> } />  
       <Route path="/orghistory" element={ <OrgSidebar><OrgHistory/></OrgSidebar> } />  
+      <Route path="/orgadd" element={ <OrgSidebar><Add/></OrgSidebar> } />  
       <Route path="/testing" element={<Testing/> } />  
       </Routes>
     </Router>
